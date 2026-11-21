@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#171715">
-<title>Pedrogabry — Fotografia autoral</title>
+<title>pedrogabry — Fotografia autoral</title>
+<link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="favicon.png">
 <meta name="description" content="Fotografia autoral, retratos e histórias em movimento. Portfólio de Pedro Gabriel.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,14 +16,59 @@
 .identity-copy{max-width:560px;z-index:2}.identity-kicker{font:500 11px 'DM Sans',sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#a9a49b}.identity h2{font:normal clamp(3.2rem,6vw,7rem)/.98 'Italiana',serif;margin:35px 0}.identity h2 em{font-weight:normal;color:#a79e92}.identity p{font-size:clamp(14px,1.35vw,18px);line-height:1.8;color:#aaa69e;max-width:340px}.identity-mark{position:relative;display:grid;place-items:center;min-height:450px}.identity-mark img{display:block;width:min(100%,440px);height:min(72vh,640px);object-fit:contain;filter:drop-shadow(0 0 24px #ffffff0a);transform:translateY(70px) rotate(-3deg);opacity:0;transition:transform 1.7s cubic-bezier(.16,1,.3,1),opacity 1.5s}.identity-mark.is-visible img{transform:translateY(0) rotate(0);opacity:1}.identity-index{position:absolute;bottom:30px;left:8vw;right:8vw;display:flex;justify-content:space-between;border-top:1px solid #ffffff30;padding-top:14px;font-size:10px;letter-spacing:.17em;color:#8e8a83;text-transform:uppercase}
 @media(max-width:760px){.identity{grid-template-columns:1fr;min-height:unset;padding:95px 7vw 90px;gap:0}.identity h2{margin:24px 0}.identity-mark{min-height:350px}.identity-mark img{height:360px;max-width:75vw}.identity-index{left:7vw;right:7vw;bottom:20px}}
 @media(prefers-reduced-motion:reduce){.identity-mark img{transition:none;transform:none;opacity:1}}
+
+/* CAPÍTULOS EXPANDIDOS — editorial cinematográfico */
+.still-story{position:relative;height:340vh;background:#10100f;color:#f0ebe3}
+.still-stage{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate}
+.still-image{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.64),rgba(7,7,7,.1) 70%),url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=2200&q=85') center 32%/cover;filter:grayscale(.65) contrast(1.13);transform:scale(1.07);transition:filter 1s}
+.still-stage:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.65),transparent 35%,rgba(0,0,0,.2));pointer-events:none}
+.still-top{position:absolute;top:7vh;left:6vw;right:6vw;z-index:3;display:flex;justify-content:space-between;font:10px Manrope,sans-serif;letter-spacing:2px;text-transform:uppercase}
+.still-progress{position:absolute;bottom:7vh;left:6vw;right:6vw;height:1px;background:#ffffff55;z-index:4}.still-progress span{display:block;width:0;height:100%;background:#fff}
+.still-panel{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:10vw;z-index:3;opacity:0;transform:translateY(40px);pointer-events:none;transition:opacity .35s,transform .55s}
+.still-panel.is-active{opacity:1;transform:translateY(0)}
+.still-panel:nth-of-type(3){align-items:flex-end;text-align:right}.still-panel:nth-of-type(4){align-items:center;text-align:center}
+.still-panel small{font:10px Manrope,sans-serif;letter-spacing:3px;text-transform:uppercase}.still-panel h2{font:clamp(65px,11vw,185px)/.85 Italiana,serif;letter-spacing:-.055em;margin:25px 0}.still-panel p{max-width:390px;font-size:clamp(14px,1.4vw,19px);line-height:1.8;color:#e1d9cf}
+.editorial-break{background:#e8e5dd;padding:145px 6vw 130px;overflow:hidden}.editorial-break .lead{display:flex;justify-content:space-between;gap:30px;align-items:start}.editorial-break h2{font:clamp(65px,11vw,180px)/.88 Italiana,serif;letter-spacing:-.055em;margin:45px 0 80px}.editorial-break h2 em{color:#9a4936;font-weight:normal}.editorial-grid{display:grid;grid-template-columns:1.1fr .7fr 1fr;gap:2.5vw;align-items:start}.editorial-grid figure{margin:0}.editorial-grid figure:nth-child(2){margin-top:180px}.editorial-grid figure:nth-child(3){margin-top:65px}.editorial-grid img{display:block;width:100%;object-fit:cover;filter:grayscale(.35) brightness(.85);transition:filter .7s,transform .9s}.editorial-grid figure:hover img{filter:none;transform:scale(1.02)}.editorial-grid figure:nth-child(1) img{aspect-ratio:.72}.editorial-grid figure:nth-child(2) img{aspect-ratio:.7}.editorial-grid figure:nth-child(3) img{aspect-ratio:.78}.editorial-grid figcaption{font:10px Manrope,sans-serif;letter-spacing:1.5px;text-transform:uppercase;padding-top:14px;display:flex;justify-content:space-between;gap:10px}
+.marquee-section{overflow:hidden;background:#9a4936;color:#f0e8df;padding:65px 0}.marquee-track{display:flex;width:max-content;gap:65px;animation:drift 38s linear infinite;font:clamp(90px,14vw,220px)/1 Italiana,serif;white-space:nowrap}.marquee-track em{font-weight:normal;color:#d6aa98}@keyframes drift{to{transform:translateX(-50%)}}
+.night{background:#111210;color:#ede9df;padding:145px 6vw}.night-head{display:flex;justify-content:space-between;align-items:end;gap:35px;border-bottom:1px solid #555;padding-bottom:45px}.night h2{font:clamp(70px,12vw,170px)/.88 Italiana,serif;margin:25px 0 0}.night-head p{max-width:320px;line-height:1.8;color:#aaa79e}.night-layout{display:grid;grid-template-columns:1.3fr .7fr;gap:8vw;margin-top:100px;align-items:center}.night-layout img{width:100%;height:auto;display:block;filter:grayscale(.5) contrast(1.12)}.night-layout .night-side img{aspect-ratio:.75;object-fit:cover}.night-side{margin-top:180px}.night-caption{font:clamp(27px,4vw,55px)/1.15 Italiana,serif;margin:35px 0;color:#e6dfd4}.night-note{font:10px Manrope,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#aaa}
+.closing-verse{min-height:95svh;background:#ded9cf;color:#24231f;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 8vw;position:relative}.closing-verse h2{font:clamp(60px,10vw,160px)/.95 Italiana,serif;letter-spacing:-.045em;font-weight:normal;max-width:1200px;margin:0}.closing-verse em{color:#9a4936;font-weight:normal}.closing-verse .verse-corner{position:absolute;left:6vw;top:60px;font:10px Manrope,sans-serif;letter-spacing:2px;text-transform:uppercase}
+@media(max-width:800px){.still-story{height:300vh}.still-image{background-position:55% center}.still-panel{padding:8vw}.still-panel h2{font-size:clamp(62px,15vw,110px)}.still-panel p{max-width:300px}.editorial-break,.night{padding:90px 6vw}.editorial-break h2{font-size:clamp(60px,14vw,110px)}.editorial-grid{grid-template-columns:1fr 1fr;gap:30px 14px}.editorial-grid figure:nth-child(2){margin-top:85px}.editorial-grid figure:nth-child(3){grid-column:1/3;width:76%;margin:30px auto 0}.editorial-grid figcaption{font-size:8px}.night-head{display:block}.night-layout{grid-template-columns:1fr;gap:30px;margin-top:60px}.night-side{width:65%;margin:0 0 0 auto}.closing-verse{min-height:70svh}.closing-verse h2{font-size:clamp(55px,12vw,100px)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}.still-panel{transition:none}.editorial-grid img{transition:none}}
+
+/* SEGUNDO CAPÍTULO FIXO — depois da assinatura */
+.signature-story{height:330vh;position:relative;background:#171713;color:#f1eee7}
+.signature-stage{position:sticky;top:0;height:100svh;isolation:isolate;overflow:hidden}
+.signature-image{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,12,12,.70),rgba(12,12,12,.14) 75%),url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=2200&q=85') center 38%/cover;filter:grayscale(.8) sepia(.12) brightness(.82);transform:scale(1.025)}
+.signature-stage:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.65),transparent 38%,rgba(0,0,0,.3));pointer-events:none}
+.signature-top{position:absolute;z-index:3;left:7vw;right:7vw;top:7vh;display:flex;justify-content:space-between;gap:15px;font:10px Manrope,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.signature-panel{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:10vw;opacity:0;transform:translateY(42px);pointer-events:none;transition:opacity .45s ease,transform .6s ease}
+.signature-panel.is-active{opacity:1;transform:none}
+.signature-panel:nth-of-type(3){align-items:flex-end;text-align:right}.signature-panel:nth-of-type(4){align-items:center;text-align:center}
+.signature-panel small{font:10px Manrope,sans-serif;letter-spacing:.3em;text-transform:uppercase}
+.signature-panel h2{font:clamp(70px,12vw,190px)/.83 Italiana,serif;letter-spacing:-.055em;margin:28px 0}
+.signature-panel p{font-size:clamp(14px,1.4vw,20px);font-weight:300;line-height:1.8;max-width:390px}
+.signature-progress{position:absolute;z-index:4;bottom:7vh;left:7vw;right:7vw;height:1px;background:#ffffff66}.signature-progress span{display:block;height:100%;width:0;background:#fff}
+@media(max-width:800px){.signature-story{height:300vh}.signature-image{background-position:58% center}.signature-panel{padding:8vw}.signature-panel h2{font-size:clamp(62px,15vw,110px)}.signature-top{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.signature-panel{transition:none}}
 </style>
 </head>
 <body>
 <div class="progress" id="progress"></div><div class="cursor" id="cursor"></div>
 <header class="nav"><a href="#inicio" class="brand">pedrogabry<small>FOTOGRAFIA AUTORAL</small></a><nav class="navlinks"><a href="#trabalhos">Ensaios</a><a href="#sobre">O fotógrafo</a><a href="#manifesto">Manifesto</a><a href="#contato">Contato</a></nav><a class="navright" href="#contato">Vamos criar algo ↗</a><a class="mobile-menu" href="#trabalhos">Explorar ↓</a></header>
 <main>
-<section class="hero" id="inicio"><div class="hero-bg" aria-hidden="true"></div><div class="side-label">Uma coleção de instantes imperfeitos — 2026</div><div class="hero-inner"><div class="eyebrow">Retratos • Cultura • Movimento</div><h1 class="hero-title">O que<br><em>fica.</em></h1><div class="hero-bottom"><p class="hero-copy">Algumas histórias não pedem palavras.<br>Pedem um olhar que saiba permanecer.</p><div class="hero-meta">Fotografia por Pedro Gabriel<br>Role para sentir <span class="scroll-line"></span></div></div></div></section>
-<section class="identity" id="identidade" aria-label="Identidade visual de Pedro Gabriel"><div class="identity-copy"><div class="identity-kicker reveal">01 / Uma assinatura, um olhar</div><h2 class="reveal">Antes de uma imagem,<br>existe <em>um olhar.</em></h2><p class="reveal">Algumas coisas não precisam ser explicadas. Só precisam ser sentidas.</p></div><div class="identity-mark"><img src="logo-pedro.png" alt="Símbolo autoral de Pedro Gabriel: papagaio branco estilizado" loading="lazy"></div><div class="identity-index"><span>Pedro Gabriel — Fotografia</span><span>Identidade autoral / 2026</span></div></section>
+<section class="hero" id="inicio"><div class="hero-bg" aria-hidden="true"></div><div class="side-label">Uma coleção de instantes imperfeitos — 2026</div><div class="hero-inner"><div class="eyebrow">Retratos • Cultura • Movimento</div><h1 class="hero-title">O que<br><em>fica.</em></h1><div class="hero-bottom"><p class="hero-copy">Algumas histórias não pedem palavras.<br>Pedem um olhar que saiba permanecer.</p><div class="hero-meta">Fotografia por pedrogabry<br>Role para sentir <span class="scroll-line"></span></div></div></div></section>
+<section class="identity" id="identidade" aria-label="Identidade visual de pedrogabry"><div class="identity-copy"><div class="identity-kicker reveal">01 / Uma assinatura, um olhar</div><h2 class="reveal">Antes de uma imagem,<br>existe <em>um olhar.</em></h2><p class="reveal">Algumas coisas não precisam ser explicadas. Só precisam ser sentidas.</p></div><div class="identity-mark"><img src="logo-pedro.png" alt="Símbolo autoral de Pedro Gabriel: papagaio branco estilizado" loading="lazy"></div><div class="identity-index"><span>pedrogabry — Fotografia</span><span>Identidade autoral / 2026</span></div></section>
+
+<section class="signature-story" id="assinatura" aria-label="Ensaio de luz e presença com fundo fixo">
+  <div class="signature-stage">
+    <div class="signature-image" aria-hidden="true"></div>
+    <div class="signature-top"><span>02 / Depois da assinatura</span><span>Um estudo sobre presença</span></div>
+    <div class="signature-panel is-active"><small>Primeiro ato / sentir</small><h2>A luz<br>encontra.</h2><p>Nem toda história começa com palavras. Algumas começam com um olhar.</p></div>
+    <div class="signature-panel"><small>Segundo ato / perceber</small><h2>O gesto<br>permanece.</h2><p>Entre o que acontece e o que lembramos, existe uma fotografia.</p></div>
+    <div class="signature-panel"><small>Terceiro ato / guardar</small><h2>O tempo<br>não leva tudo.</h2><p>O instante passa. A sensação escolhe ficar.</p></div>
+    <div class="signature-progress" aria-hidden="true"><span></span></div>
+  </div>
+</section>
 <section class="intro" id="essencia"><div class="section-index reveal">01 / O começo de tudo</div><div class="intro-grid"><div class="intro-aside reveal">Não é sobre a foto perfeita.<br>É sobre aquilo que acontece antes que alguém perceba a câmera.</div><h2 class="reveal">Entre o instante<br>e a <i>saudade,</i><br>existe uma imagem.</h2></div><div class="scribble reveal">o tempo não espera.</div></section>
 <section class="chapter" id="trabalhos"><div class="chapter-top reveal"><div><div class="section-index">02 / Arquivo sensível</div><h2>Histórias<br>em imagens.</h2></div><p>Um recorte de rostos, silêncios, encontros e lugares. Fotografias que não precisam explicar tudo.</p></div><p class="sample-note reveal">IMAGENS DE REFERÊNCIA — seleção visual temporária para apresentar a direção artística. Em breve, fotografias autorais.</p><div class="gallery">
 <a class="work reveal" href="#contato"><span class="work-number">01 —</span><div class="photo-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85" alt="Paisagem contemplativa sob luz cinematográfica"></div><div class="work-label"><b>Onde o mundo desacelera</b><span>Editorial / 01</span></div></a>
@@ -32,10 +78,27 @@
 <a class="work reveal" href="#contato"><span class="work-number">05 —</span><div class="photo-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1100&q=85" alt="Retrato em luz natural"></div><div class="work-label"><b>A beleza do intervalo</b><span>Retrato / 05</span></div></a>
 <a class="work reveal" href="#contato"><span class="work-number">06 —</span><div class="photo-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1400&q=85" alt="Público em evento cultural"></div><div class="work-label"><b>Quando a noite acontece</b><span>Evento / 06</span></div></a>
 </div><p class="chapter-caption reveal">Cada imagem é um começo, nunca um ponto final.</p></section>
+
+<section class="still-story" id="tempo" aria-label="Ensaio editorial com imagem fixa durante a rolagem">
+ <div class="still-stage"><div class="still-image" role="img" aria-label="Fotografia editorial de moda em atmosfera cinematográfica"></div><div class="still-top"><span>03 / O tempo suspenso</span><span>Um ensaio em três movimentos</span></div>
+ <div class="still-panel is-active"><small>Movimento I — presença</small><h2>O mundo<br>lá fora.</h2><p>Há instantes em que tudo parece parar. E é justamente aí que a imagem começa.</p></div>
+ <div class="still-panel"><small>Movimento II — ausência</small><h2>O silêncio<br>também fala.</h2><p>O que não foi dito encontra um lugar na luz, no gesto, na distância.</p></div>
+ <div class="still-panel"><small>Movimento III — permanência</small><h2>E alguma<br>coisa fica.</h2><p>Mesmo quando a cena termina, a sensação encontra outra forma de existir.</p></div>
+ <div class="still-progress"><span></span></div></div>
+</section>
 <section class="interlude"><blockquote class="reveal">Tudo muda.<span>Mas alguma coisa</span>permanece.</blockquote><div class="eyebrow">Interlúdio / uma pausa para sentir</div></section>
-<section class="about" id="sobre"><div class="about-photo reveal"><span class="photo-disclaimer">RETRATO ILUSTRATIVO</span><img loading="lazy" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=85" alt="Retrato ilustrativo de referência — não representa Pedro Gabriel"></div><div class="about-copy"><div class="section-index reveal">03 / Por trás da lente</div><h2 class="reveal">Prazer,<br>Pedro.</h2><p class="reveal">Fotografo o que me atravessa. A energia de um palco, a delicadeza de um gesto, a personalidade de um rosto, a história que vive nos detalhes.</p><p class="reveal">Meu trabalho nasce da vontade de transformar momentos passageiros em algo que se possa revisitar — com verdade, sensibilidade e uma estética própria.</p><div class="signature reveal">com afeto, Pedro.</div></div></section>
+
+<section class="editorial-break" id="editorial"><div class="lead"><span class="section-index">04 / Corpo & expressão</span><span class="eyebrow">Estudos visuais — imagens de referência</span></div><h2 class="reveal">A beleza de<br><em>ser movimento.</em></h2><div class="editorial-grid">
+<figure class="reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1100&q=85" alt="Imagem de referência de moda em cenário urbano"><figcaption><span>01 / Presença</span><span>Moda</span></figcaption></figure>
+<figure class="reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Imagem de referência de estilo e expressão"><figcaption><span>02 / Matéria</span><span>Estilo</span></figcaption></figure>
+<figure class="reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1100&q=85" alt="Imagem de referência de moda e movimento"><figcaption><span>03 / Gesto</span><span>Editorial</span></figcaption></figure>
+</div></section>
+<section class="marquee-section" aria-label="Fotografia, memória e movimento"><div class="marquee-track" aria-hidden="true"><span>luz <em>·</em> memória <em>·</em> movimento <em>·</em> </span><span>luz <em>·</em> memória <em>·</em> movimento <em>·</em> </span></div></section>
+<section class="night" id="noite"><div class="night-head"><div><div class="section-index">05 / Depois que a luz vai embora</div><h2>A noite<br>também vive.</h2></div><p>Um palco, uma cidade, uma multidão. Histórias que aparecem quando o mundo acende suas próprias luzes.</p></div><div class="night-layout"><div class="reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1500&q=85" alt="Imagem de referência de festival noturno"><p class="night-caption">O instante antes do último aplauso.</p><span class="night-note">Arquivo visual / Referência</span></div><div class="night-side reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1000&q=85" alt="Imagem de referência de show com luzes dramáticas"><p class="night-caption">Tudo vibra.</p><span class="night-note">Som / Cultura / Encontro</span></div></div></section>
+<section class="about" id="sobre"><div class="about-photo reveal"><span class="photo-disclaimer">RETRATO ILUSTRATIVO</span><img loading="lazy" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=85" alt="Retrato ilustrativo de referência — não representa Pedro Gabriel"></div><div class="about-copy"><div class="section-index reveal">03 / Por trás da lente</div><h2 class="reveal">Prazer,<br>pedrogabry.</h2><p class="reveal">Fotografo o que me atravessa. A energia de um palco, a delicadeza de um gesto, a personalidade de um rosto, a história que vive nos detalhes.</p><p class="reveal">Meu trabalho nasce da vontade de transformar momentos passageiros em algo que se possa revisitar — com verdade, sensibilidade e uma estética própria.</p><div class="signature reveal">com afeto, pedrogabry.</div></div></section>
 <section class="manifesto" id="manifesto"><div><div class="section-index reveal">04 / No que acredito</div><h2 class="reveal">Um jeito<br>de olhar.</h2></div><ol class="manifesto-list"><li class="reveal"><small>01</small> Sentir antes de fotografar.</li><li class="reveal"><small>02</small> Encontrar beleza no imperfeito.</li><li class="reveal"><small>03</small> Deixar a imagem respirar.</li><li class="reveal"><small>04</small> Nunca repetir uma história.</li></ol></section>
-<section class="contact" id="contato"><div><div class="section-index">05 / O próximo capítulo</div><h2 class="reveal">E agora,<br><a href="mailto:contato@exemplo.com?subject=Vamos%20criar%20algo">nós dois?</a></h2><div class="contact-mid"><p>Tem uma história, uma ideia ou um momento que merece ser lembrado? Quero ouvir.</p><div class="contact-links"><a href="https://www.instagram.com/pedrogabry/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="mailto:contato@exemplo.com?subject=Ensaio%20fotogr%C3%A1fico">E-mail ↗</a></div></div></div><footer class="footer"><span>© <span id="year">2026</span> Pedro Gabriel</span><span>Feito de luz, tempo e sentimento.</span><a href="#inicio">Voltar ao início ↑</a></footer></section>
+<section class="closing-verse"><span class="verse-corner">07 / O que vem depois</span><h2 class="reveal">Talvez fotografar seja isso: <em>não deixar o instante ir embora sozinho.</em></h2></section>
+<section class="contact" id="contato"><div><div class="section-index">05 / O próximo capítulo</div><h2 class="reveal">E agora,<br><a href="mailto:pedrogabry2@gmail.com?subject=Vamos%20criar%20algo">nós dois?</a></h2><div class="contact-mid"><p>Tem uma história, uma ideia ou um momento que merece ser lembrado? Quero ouvir.</p><div class="contact-links"><a href="https://www.instagram.com/pedrogabry/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="mailto:pedrogabry2@gmail.com?subject=Ensaio%20fotogr%C3%A1fico">E-mail ↗</a></div></div></div><footer class="footer"><span>© <span id="year">2026</span> pedrogabry</span><span>Feito de luz, tempo e sentimento.</span><a href="#inicio">Voltar ao início ↑</a></footer></section>
 </main>
 <script>
 /* TROQUE AS FOTOS AQUI: substitua cada URL por "fotos/minha-foto.jpg".
@@ -50,12 +113,16 @@ const fotos = {
   ensaio5: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1100&q=85',
   ensaio6: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1400&q=85',
   sobre: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=85',
-  intervalo: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=2200&q=80'
+  intervalo: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=2200&q=80',
+  assinaturaFixa: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=2200&q=85',
+  fundoFixo: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=2200&q=85'
 };
 document.querySelector('.hero-bg').style.backgroundImage = `linear-gradient(90deg,rgba(10,10,9,.63),rgba(10,10,9,.03) 75%),linear-gradient(0deg,rgba(10,10,9,.55),transparent 40%),url("${fotos.capa}")`;
 document.querySelectorAll('.work img').forEach((img,i)=>{img.src=fotos['ensaio'+(i+1)];img.onerror=()=>{img.style.opacity='.25';img.alt='Imagem indisponível temporariamente'}});
 document.querySelector('.about-photo img').src=fotos.sobre;
 document.querySelector('.interlude').style.setProperty('--interlude-photo',`url("${fotos.intervalo}")`);
+document.querySelector('.signature-image').style.backgroundImage = `linear-gradient(90deg,rgba(12,12,12,.70),rgba(12,12,12,.14) 75%),url("${fotos.assinaturaFixa}")`;
+document.querySelector('.still-image').style.backgroundImage = `linear-gradient(90deg,rgba(7,7,7,.64),rgba(7,7,7,.1) 70%),url("${fotos.fundoFixo}")`;
 const progress=document.querySelector('#progress');const cursor=document.querySelector('#cursor');const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?scrollY/max*100:0)+'%'};addEventListener('scroll',update,{passive:true});update();document.querySelector('#year').textContent=new Date().getFullYear();if('IntersectionObserver'in window&&!reduced){const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -35px 0px'});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e))}else document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'));if(matchMedia('(pointer:fine)').matches&&!reduced){cursor.style.display='block';addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a').forEach(a=>{a.addEventListener('mouseenter',()=>cursor.classList.add('big'));a.addEventListener('mouseleave',()=>cursor.classList.remove('big'))})}
 const identityMark = document.querySelector('.identity-mark');
 if (identityMark) {
@@ -66,5 +133,42 @@ if (identityMark) {
     markObserver.observe(identityMark);
   } else { identityMark.classList.add('is-visible'); }
 }
+
+// A imagem fica parada; a rolagem muda apenas os capítulos sobrepostos.
+const stickyStory = document.querySelector('.still-story');
+const stickyPanels = [...document.querySelectorAll('.still-panel')];
+const stickyBar = document.querySelector('.still-progress span');
+let stickyScheduled = false;
+function updateStickyStory(){
+ if(!stickyStory) return;
+ const rect = stickyStory.getBoundingClientRect();
+ const travel = Math.max(1, stickyStory.offsetHeight - window.innerHeight);
+ const progress = Math.max(0, Math.min(1, -rect.top / travel));
+ const index = Math.min(stickyPanels.length - 1, Math.floor(progress * stickyPanels.length));
+ stickyPanels.forEach((panel,i)=>panel.classList.toggle('is-active',i===index));
+ stickyBar.style.width=(progress*100)+'%';
+ stickyScheduled=false;
+}
+window.addEventListener('scroll',()=>{if(!stickyScheduled){stickyScheduled=true;requestAnimationFrame(updateStickyStory)}},{passive:true});
+window.addEventListener('resize',updateStickyStory);
+updateStickyStory();
+// Segunda sequência fixa, logo abaixo da seção da marca.
+const signatureStory=document.querySelector('.signature-story');
+const signaturePanels=[...document.querySelectorAll('.signature-panel')];
+const signatureBar=document.querySelector('.signature-progress span');
+let signatureScheduled=false;
+function updateSignatureStory(){
+ if(!signatureStory)return;
+ const rect=signatureStory.getBoundingClientRect();
+ const travel=Math.max(1,signatureStory.offsetHeight-window.innerHeight);
+ const amount=Math.max(0,Math.min(1,-rect.top/travel));
+ const index=Math.min(signaturePanels.length-1,Math.floor(amount*signaturePanels.length));
+ signaturePanels.forEach((panel,i)=>panel.classList.toggle('is-active',i===index));
+ signatureBar.style.width=(amount*100)+'%';
+ signatureScheduled=false;
+}
+window.addEventListener('scroll',()=>{if(!signatureScheduled){signatureScheduled=true;requestAnimationFrame(updateSignatureStory)}},{passive:true});
+window.addEventListener('resize',updateSignatureStory);
+updateSignatureStory();
 </script>
 </body></html>
